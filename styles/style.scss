@@ -1,0 +1,520 @@
+@import './header';
+
+
+
+$blue:rgb(89, 130, 153);
+$offwhihte:#dddddd;
+$white:rgba(255, 255, 255, 0.933);
+$lightblue: #5d90bd;
+$center:center;
+
+
+
+*{
+   
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+  
+}
+
+#top_grid{
+    display: grid;
+    grid-template-columns: repeat(1,fr);
+    grid-auto-rows: minmax(400px, auto);
+    grid-template-areas: "top"
+    
+}
+
+.top{
+    padding-top: 15%;
+    grid-area: top;
+    margin-left: auto;
+    margin-right: auto;
+    
+    justify-content: center;
+    
+    flex-wrap: wrap;
+}
+
+.button{
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: $lightblue;
+    color: $offwhihte;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    width: 200px;
+    margin-left: 30%;
+    transition: .3s;
+    
+    &:hover{
+      background-color: darken( $lightblue, 25% );
+      transition: .3s;
+    cursor: pointer;
+    };
+    
+
+}
+
+h1{
+    font-family: 'Oswald', sans-serif;;
+    color: $white;
+    text-align: center;
+    color: $white;
+    font-size: 100px;
+}
+h2{
+    font-family: 'Oswald', sans-serif;;
+    color: $white;
+    text-align: center;
+    color: $white;
+    font-size: 100px;
+}
+h3{
+    font-family: 'Oswald', sans-serif;;
+    color: $white;
+    text-align: center;
+    color: $white;
+    font-size: 70px;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+h4{
+    font-family: 'Oswald', sans-serif;;
+    color: $white;
+    text-align: center;
+    font-size: 45px;
+}
+
+h5{
+    font-family: 'Oswald', sans-serif;;
+    color: $white;
+
+    color: $white;
+    font-size: 70px;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+
+#grid_info{
+    display: grid;
+    grid-template-columns: repeat(2,fr);
+    grid-auto-rows: minmax(50vh, auto);
+  
+    background-image: url(img/stand_01.jpg);
+    background-size: cover;
+    background-position: center;  
+    grid-template-areas: 
+    "info1 info2"
+    "info3 info3"
+
+    
+}
+
+
+.info_01{
+    grid-area: info1;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+   
+}
+.info_02{
+    grid-area: info2;
+    
+}
+.info_03{
+    grid-area: info3;
+    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+
+.s_icon{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    color: $lightblue;
+    font-size: 70px;
+    width: 100%;
+    justify-content: space-around;
+    display: flex;
+}
+.s_icon_foot{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    color: darken( $lightblue, 20% );
+    font-size: 40px;
+    width: 60%;
+    justify-content: space-around;
+    display: flex;
+}
+
+.trygfonden{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.vid{
+    width: 700px;
+    height: 100%;
+}
+
+
+#footer_grid{
+        display: grid;
+        grid-template-columns: repeat(4,fr);
+        grid-auto-rows: minmax(40vh, auto);
+        background-color: $lightblue;
+        grid-template-areas: 
+        "foot1 foot2 foot3 foot4";
+       
+
+}
+
+.foot1{
+    grid-area: foot1;
+    margin: 20px;
+}
+.foot2{
+    grid-area: foot2;
+    margin: 20px;
+}
+.foot3{
+    grid-area: foot3;
+    margin: 20px;
+}
+.foot4{
+    grid-area: foot4;
+    margin: 20px;
+}
+
+.hr_line{
+    width: 100%;
+    height: 5px;
+    background-color: $offwhihte;
+    display: none;
+}
+
+.text_footer{
+    margin-top: 20px;
+    color: $white;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+
+
+#sikkerhed_grid{
+
+    display: grid;
+    grid-template-columns: repeat(4,fr);
+    grid-auto-rows: minmax(60vh, auto);
+    background-image: url(img/redningskrans.jpg);
+    padding: 10px;
+    background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+    grid-template-areas: 
+     "sikkerhed01 sikkerhed01 sikkerhed02 sikkerhed02";
+
+
+}
+
+.sikkerhed_01{
+    grid-area: sikkerhed01;
+    margin: 100px;
+
+}
+
+.sikkerhed_02{
+    grid-area: sikkerhed02;
+    margin: 50px;
+}
+  
+  
+.img_sikker{
+    width: 100%;
+    
+    margin: 0px;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.sikker_text{
+margin-top: 20px;
+font-family: 'Roboto', sans-serif;
+font-size: 40px;
+color: $white;
+text-shadow: 2px 2px 4px #000000;
+
+}
+
+
+@media screen and (max-width:1100px) {
+
+    #sikkerhed_grid{
+
+        display: grid;
+        grid-template-columns: repeat(4,fr);
+        grid-auto-rows: minmax(60vh, auto);
+        background-image: url(img/redningskrans.jpg);
+        padding: 0px;
+        background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+        grid-template-areas: 
+         
+         "sikkerhed02 sikkerhed02 sikkerhed02 sikkerhed02";
+    
+    
+    };
+    
+    .sikkerhed_01{
+        display: none;
+        grid-area: sikkerhed01;
+        margin: 0px;
+    
+    }
+    
+    .sikkerhed_02{
+        grid-area: sikkerhed02;
+        margin: 10px;
+    }
+
+
+    .img_sikker{
+        margin: 10px;
+        width: 100%;
+      
+    
+    }
+
+    .sikker_text{
+        text-align: center;
+        margin-top: 20px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 40px;
+        color: $white;
+        text-shadow: 2px 2px 4px #000000;
+        
+        }
+
+        h5{
+            text-align: center;
+        }
+
+  };
+
+
+
+@media screen and (max-width: 735px) {
+  
+
+    #grid_info{
+        display: grid;
+        grid-template-columns: repeat(2,fr);
+        grid-auto-rows: minmax(50vh, auto);
+      
+        background-image: url(img/stand_01.jpg);
+        background-size: cover;
+        background-position: center;  
+        grid-template-areas: 
+        "info1 info1"
+        "info3 info3"
+        "info2 info2";
+        
+    
+        
+    }
+    
+    
+    .info_01{
+        grid-area: info1;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 25px;
+       
+    }
+    .info_02{
+        grid-area: info2;
+        
+    }
+    .info_03{
+        grid-area: info3;
+        margin: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
+    
+    
+    .s_icon{
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        color: $lightblue;
+        font-size: 70px;
+        width: 100%;
+        justify-content: space-around;
+        display: flex;
+    }
+    
+    .trygfonden{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .vid{
+        width: 550px;
+        height: 100%;
+    }
+
+
+
+    #footer_grid{
+        display: grid;
+        grid-template-columns: repeat(4,fr);
+        grid-auto-rows: minmax(40vh, auto);
+        background-color: $lightblue;
+        grid-template-areas: 
+        "foot1 foot1 foot1 foot1"
+        
+        "foot3 foot3 foot3 foot3"
+        "foot4 foot4 foot4 foot4"
+       
+
+}
+
+.hr_line{
+    width: 100%;
+    height: 5px;
+    background-color: $offwhihte;
+ 
+}
+
+.foot1{
+    grid-area: foot1;
+    margin: 20px;
+}
+.foot2{
+    grid-area: foot2;
+    margin: 20px;
+    display: none;
+}
+.foot3{
+    grid-area: foot3;
+    margin: 20px;
+}
+.foot4{
+    grid-area: foot4;
+    margin: 20px;
+}
+
+
+.s_icon_foot{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    color: darken( $lightblue, 20% );
+    font-size: 70px;
+    width: 100%;
+    justify-content: space-around;
+    display: flex;
+}
+
+
+
+
+
+  }
+
+
+  @media screen and (max-width: 560px) {
+
+
+
+    #grid_info{
+        display: grid;
+        grid-template-columns: repeat(2,fr);
+        grid-auto-rows: minmax(50vh, auto);
+      
+        background-image: url(img/stand_01.jpg);
+        background-size: cover;
+        background-position: center;  
+        grid-template-areas: 
+        "info1 info1"
+        "info2 info2";
+        
+        
+    
+        
+    }
+    
+    
+    .info_01{
+        grid-area: info1;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 25px;
+       
+    }
+    .info_02{
+       
+        grid-area: info2;
+        
+    }
+    .info_03{
+        display: none;
+        grid-area: info3;
+        margin: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
+    
+    
+    .s_icon{
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        color: $lightblue;
+        font-size: 70px;
+        width: 100%;
+        justify-content: space-around;
+        display: flex;
+    }
+    
+    .trygfonden{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .vid{
+        width: 550px;
+        height: 100%;
+    }
+
+    .sikker_text{
+        text-align: center;
+        margin-top: 20px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 30px;
+        color: $white;
+        text-shadow: 2px 2px 4px #000000;
+        
+        }
+
+  };
+
